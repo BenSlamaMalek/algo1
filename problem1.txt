@@ -1,0 +1,20 @@
+set1 = [3, 1, 7, 9]
+set2 = [2, 4, 1, 9, 3]
+
+sum = 0
+distinctElements = []
+
+# Iterating over Set 1
+for element in set1:
+    if element not in set2:
+        sum += element
+        distinctElements.append(element)
+
+# Iterating over Set 2
+for element in set2:
+    if element not in set1:
+        sum += element
+        distinctElements.append(element)
+
+print("Sum of distinct elements:", sum)
+print("Distinct elements:", distinctElements)

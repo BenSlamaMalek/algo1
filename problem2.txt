@@ -1,0 +1,30 @@
+def dot_product(v1, v2):
+    ps = 0
+    for i in range(len(v1)):
+        ps += v1[i] * v2[i]
+    return ps
+
+n = int(input("Enter the number of vector pairs: "))
+
+for _ in range(n):
+    size = int(input("Enter the size of vectors: "))
+    
+    v1 = []
+    v2 = []
+    
+    print("Enter the elements of vector 1:")
+    for _ in range(size):
+        element = int(input())
+        v1.append(element)
+    
+    print("Enter the elements of vector 2:")
+    for _ in range(size):
+        element = int(input())
+        v2.append(element)
+    
+    ps = dot_product(v1, v2)
+    
+    if ps == 0:
+        print("Vectors are orthogonal.")
+    else:
+        print("Vectors are not orthogonal.")
